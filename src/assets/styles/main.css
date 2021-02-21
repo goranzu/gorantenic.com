@@ -1,0 +1,13 @@
+@import './base/reset.css';
+
+@import './components/container.css';
+
+
+
+
+/* purgecss start ignore */
+main img {
+  /* stylelint-disable-next-line */
+  content-visibility: auto;
+}
+/* purgecss end ignore */

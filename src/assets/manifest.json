@@ -1,0 +1,13 @@
+{
+  "name": "Goran's Site",
+  "short_name": "gs",
+  "description": "Goran's Site",
+  "dir": "auto",
+  "lang": "en-US",
+  "display": "standalone",
+  "orientation": "any",
+  "start_url": "/",
+  "background_color": "#222",
+  "theme_color": "#222",
+  "icons": []
+}
