@@ -9,7 +9,7 @@
 - Snowpack
 - Webpack
 - Babel
-    
+
 ## Features
 
 - Fast development using snowpack.

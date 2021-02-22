@@ -1,0 +1,37 @@
+.btn,
+.github-button {
+  background-color: var(--accent-primary);
+  border: none;
+  border: 3px solid var(--accent-primary);
+  border-radius: 5px;
+  box-shadow: var(--bx-shadow);
+  color: var(--text-clr-light);
+  cursor: pointer;
+  font-weight: 600;
+  padding: 0.4em;
+}
+
+.btn--outline {
+  background-color: transparent;
+  color: var(--text-clr-dark);
+}
+
+.github-button {
+  align-items: center;
+  background-color: var(--accent-secondary);
+  border-color: var(--accent-secondary);
+  display: inline-block;
+  display: flex;
+  font-weight: 400;
+  justify-content: center;
+  text-decoration: none;
+  width: 100%;
+
+  & * + * {
+    margin-left: 0.5em;
+  }
+
+  & span {
+    margin-top: 0;
+  }
+}

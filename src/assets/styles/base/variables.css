@@ -1,0 +1,43 @@
+:root {
+  --light-bg-clr: #fafeff;
+  --light-text-dark-clr: #252525;
+  --light-text-light-clr: #f5fcfe;
+  --light-accent-primary: #ff9a29;
+  --light-accent-secondary: #bf741f;
+  --light-gradient: linear-gradient(108.54deg, #2882ff 0%, #146180 99.14%);
+
+  --dark-text-light-clr: #f2f2f2;
+  --dark-text-dark-clr: #292929;
+  --dark-accent-primary: #e8d34d;
+  --dark-accent-secondary: #a89938;
+  --dark-gradient: linear-gradient(108.54deg, #8274db 0%, #201c36 99.14%);
+
+  --blue-100: #28c2ff;
+  --blue-200: #25afe6;
+  --blue-300: #146180;
+
+  --purple-100: #5c529c;
+  --purple-200: #2e294e;
+  --purple-300: #201c36;
+
+  --body-bg-clr: var(--light-bg-clr, white);
+  --text-clr-dark: var(--light-text-dark-clr, black);
+  --text-clr-light: var(--light-text-light-clr, white);
+  --accent-primary: var(--light-accent-primary, orange);
+  --accent-secondary: var(--light-accent-secondary, darkorange);
+  --lin-gradient: var(--light-gradient, blue);
+
+  --hero-bg-clr: var(--blue-100, blue);
+  --skill-bg-clr: var(--blue-200);
+  --skill-card-bg-clr: var(--blue-300);
+  --skill-tag-bg-clr: var(--blue-200);
+  --footer-bg-clr: var(--blue-200);
+
+  --fs-100: 1rem;
+  --fs-200: 1.125rem;
+  --fs-300: 1.25rem;
+  --fs-400: 1.5rem;
+  --fs-500: 2rem;
+
+  --bx-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}

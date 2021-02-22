@@ -2,6 +2,27 @@
 layout: 'base.njk'
 ---
 
+  <section class="hero">
+    {% include "sections/hero.njk" %}
+  </section>
+
 <div class="container">
-  <h1>Hello</h1>
+  <section class="featured">
+    {% include "sections/featured.njk" %}
+  </section>
+
+  <section class="skills">
+    {% include "sections/skills.njk" %}
+  </section>
+
+  <section class="work">
+    {% include "sections/work.njk" %}
+  </section>
+
+  <section class="contact">
+    {% include "sections/contact.njk" %}
+  </section>
 </div>
+<footer class="footer">
+  {% include "sections/footer.njk" %}
+</footer>

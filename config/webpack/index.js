@@ -1,23 +1,23 @@
-const TerserPlugin = require('terser-webpack-plugin');
-const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const TerserPlugin = require("terser-webpack-plugin");
+const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 
-const paths = require('../paths');
-const plugins = require('./plugins');
-const loaders = require('./loaders');
+const paths = require("../paths");
+const plugins = require("./plugins");
+const loaders = require("./loaders");
 
 module.exports = {
-  mode: 'production',
-  target: 'web',
-  devtool: 'source-map',
+  mode: "production",
+  target: "web",
+  devtool: "source-map",
 
   entry: [...paths.webpack.entry],
 
   output: {
     path: paths.webpack.output.path,
-    chunkFilename: '[name].[chunkhash:4].js',
-    filename: '[name].[chunkhash:8].js',
-    publicPath: '/',
-    crossOriginLoading: 'anonymous',
+    chunkFilename: "[name].[chunkhash:4].js",
+    filename: "[name].[chunkhash:8].js",
+    publicPath: "/",
+    crossOriginLoading: "anonymous",
   },
 
   module: {
@@ -35,7 +35,7 @@ module.exports = {
 
       new OptimizeCssAssetsPlugin({
         cssProcessorPluginOptions: {
-          preset: ['advanced', { discardComments: { removeAll: true } }],
+          preset: ["advanced", { discardComments: { removeAll: true } }],
         },
       }),
     ],
@@ -46,8 +46,8 @@ module.exports = {
       cacheGroups: {
         commons: {
           test: /[\\/]web_modules[\\/]/,
-          name: 'vendor',
-          chunks: 'all',
+          name: "vendor",
+          chunks: "all",
         },
       },
     },

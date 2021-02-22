@@ -1,0 +1,19 @@
+.hero-background {
+  background-color: var(--hero-bg-clr);
+  height: 570px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.hero-svg {
+  fill: var(--hero-bg-clr);
+  left: 0;
+  max-height: 150px;
+  position: absolute;
+  top: 570px;
+  width: 100%;
+  z-index: -1;
+}

@@ -1,9 +1,14 @@
-@import './base/reset.css';
+@import "./base/variables.css";
+@import "./base/typography.css";
+@import "./base/reset.css";
+@import "./base/layout.css";
 
-@import './components/container.css';
-
-
-
+@import "./components/container.css";
+@import "./components/hero-background.css";
+@import "./components/header.css";
+@import "./components/hero.css";
+@import "./components/btn.css";
+@import "./components/demo.css";
 
 /* purgecss start ignore */
 main img {

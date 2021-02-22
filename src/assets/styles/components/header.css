@@ -1,0 +1,28 @@
+.header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 1em 0;
+
+  & .logo::before {
+    background-color: var(--accent-primary);
+    content: "";
+    display: block;
+    height: 5px;
+    left: 0;
+    position: absolute;
+    top: -4px;
+    width: 25%;
+  }
+
+  & .open-nav-btn {
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+}

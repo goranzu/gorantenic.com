@@ -1,11 +1,21 @@
 ---
-title: 'YAES - Yet another eleventy starter.'
+title: 'Goran Tenic - Portfolio'
 ---
 
 <!DOCTYPE html>
 <html lang="en">
   {% include "head.njk" %}
   <body>
+
+<div class="hero-background">
+</div>
+<svg class="hero-svg" fill="currentColor" preserveAspectRatio="none" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <polygon fill="inherit" points="0,0 100,0 0,100" />
+</svg>
+
+  <div class="container">
+    {% include "sections/header.njk" %}
+  </div>
     <main>
       {{ content | safe }}
     </main>
