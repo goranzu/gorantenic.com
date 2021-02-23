@@ -9,6 +9,11 @@
 @import "./components/hero.css";
 @import "./components/btn.css";
 @import "./components/demo.css";
+@import "./components/skills.css";
+@import "./components/work.css";
+@import "./components/contact.css";
+@import "./components/footer.css";
+@import "./components/main-nav.css";
 
 /* purgecss start ignore */
 main img {

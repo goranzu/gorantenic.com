@@ -1,0 +1,17 @@
+.footer {
+  background-color: var(--footer-bg-clr);
+  color: var(--text-clr-dark);
+  padding: 2em 0;
+
+  & .copyright {
+    font-size: 0.9rem;
+  }
+
+  & .copyright > * {
+    display: block;
+  }
+
+  & .copyright * + * {
+    margin-top: 0.5em;
+  }
+}

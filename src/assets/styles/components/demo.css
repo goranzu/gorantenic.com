@@ -14,10 +14,11 @@
   }
 
   & header svg {
+    left: var(--left, unset);
     opacity: 0.3;
     position: absolute;
-    right: 0.5rem;
-    top: -4.2rem;
+    right: var(--right, 0.5rem);
+    top: var(--top, -4.2rem);
   }
 
   & header h4 {
@@ -27,7 +28,22 @@
   & header h3 {
     font-size: var(--fs-400);
     font-weight: 500;
+    position: relative;
   }
+
+  /* & header h3::after {
+    background-color: var(--accent-primary);
+    border-radius: 10000px;
+    content: "";
+    display: block;
+    height: 100px;
+    left: var(--left, unset);
+    opacity: 0.3;
+    position: absolute;
+    right: var(--right, -1rem);
+    top: var(--top, -5.5rem);
+    width: 100px;
+  } */
 
   & main {
     line-height: 1.6;
@@ -38,5 +54,85 @@
     margin-left: auto;
     margin-right: auto;
     max-width: 12rem;
+  }
+
+  & .image-container {
+    align-items: center;
+    background: var(--lin-gradient);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    max-width: 732px;
+    padding: 0.5em;
+
+    & img {
+      height: auto;
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+}
+
+.demo--left {
+  --dir: left;
+  --pad: 0 0 0 1.5em;
+  --right: 0;
+  --left: 1rem;
+  --flex-dir: row;
+  --text-dir: left;
+  --m-left: 0;
+  --m-right: auto;
+  --image-m-left: auto;
+  --image-m-right: -5em;
+  --image-m-left-xl: auto;
+  --image-m-right-xl: -10em;
+  --flex-gap-left: 0;
+  --flex-gap-right: 2em;
+}
+
+@media (min-width: 49rem) {
+  .demo {
+    text-align: var(--text-dir, right);
+
+    & .content {
+      margin-left: var(--m-left, auto);
+      margin-right: var(--m-rigth, 0);
+      max-width: 36rem;
+    }
+
+    & .article-buttons {
+      margin-left: var(--m-left, auto);
+      margin-right: var(--m-right, 0);
+    }
+
+    & .image-container {
+      margin-left: var(--image-m-left, -5em);
+      margin-right: var(--image-m-right, 0);
+      margin-top: 1em;
+    }
+  }
+}
+
+@media (min-width: 75rem) {
+  .demo {
+    display: flex;
+    flex-direction: var(--flex-dir, row-reverse);
+
+    & * + * {
+      margin-left: var(--flex-gap-left, 2em);
+      margin-right: var(--flex-gap-right, 0);
+    }
+
+    & .content,
+    & .image-container {
+      flex-basis: 50%;
+      flex-grow: 1;
+      margin-top: 0;
+    }
+
+    & .image-container {
+      margin-left: var(--image-m-left-xl, -10em);
+      margin-right: var(--image-m-right-xl, 0);
+    }
   }
 }

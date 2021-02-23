@@ -32,6 +32,7 @@ html:focus-within {
 
 /* Set core body defaults */
 body {
+  background-color: var(--body-bg-clr);
   line-height: 1.5;
   min-height: 100vh;
   text-rendering: optimizeSpeed;
@@ -55,6 +56,10 @@ button,
 textarea,
 select {
   font: inherit;
+}
+
+[hidden] {
+  display: none !important;
 }
 
 /* Remove all animations and transitions for people that prefer not to see them */

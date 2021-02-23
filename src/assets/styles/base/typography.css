@@ -2,7 +2,7 @@ body {
   font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, Segoe UI,
     Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
     sans-serif;
-  font-size: 1.125rem;
+  font-size: var(--body-fs, 1.125rem);
   text-align: center;
 }
 

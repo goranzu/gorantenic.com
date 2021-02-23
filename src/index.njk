@@ -2,7 +2,7 @@
 layout: 'base.njk'
 ---
 
-  <section class="hero">
+  <section class="hero container">
     {% include "sections/hero.njk" %}
   </section>
 
@@ -10,11 +10,13 @@ layout: 'base.njk'
   <section class="featured">
     {% include "sections/featured.njk" %}
   </section>
+</div>
 
-  <section class="skills">
-    {% include "sections/skills.njk" %}
-  </section>
+<section class="skills">
+  {% include "sections/skills.njk" %}
+</section>
 
+<div class="container">
   <section class="work">
     {% include "sections/work.njk" %}
   </section>
@@ -23,6 +25,7 @@ layout: 'base.njk'
     {% include "sections/contact.njk" %}
   </section>
 </div>
+
 <footer class="footer">
   {% include "sections/footer.njk" %}
 </footer>

@@ -1,7 +1,48 @@
 .hero {
-  margin-top: 7rem;
+  margin-top: 4em;
 }
 
 .featured {
-  margin-top: 15em;
+  margin-top: 11em;
+}
+
+.skills {
+  margin-top: 4em;
+}
+
+section {
+  padding: 3em 0;
+}
+
+.work {
+  margin-top: 4em;
+}
+
+.contact {
+  margin-top: 2em;
+}
+
+.footer {
+  margin-top: 4em;
+}
+
+@media (min-width: 34.5rem) {
+  .featured {
+    margin-top: 16em;
+  }
+}
+
+@media (min-width: 49rem) {
+  .featured {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 8em;
+    /* max-width: var(--page-width); */
+  }
+}
+
+@media (min-width: 67.5rem) {
+  .work {
+    margin-top: 8em;
+  }
 }

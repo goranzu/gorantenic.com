@@ -1,0 +1,45 @@
+.main-nav {
+  display: none;
+  & ul {
+    align-items: center;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+
+  & ul > li + li {
+    margin-left: 1em;
+  }
+
+  & a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  & a:hover {
+    text-decoration: underline;
+  }
+}
+
+.socials {
+  display: none;
+  & ul {
+    align-items: center;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+
+  & ul > li + li {
+    margin-left: 0.5em;
+  }
+}
+
+@media (min-width: 41rem) {
+  .main-nav {
+    display: inline-block;
+  }
+  .socials {
+    display: inline-block;
+  }
+}

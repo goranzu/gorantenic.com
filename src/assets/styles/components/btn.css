@@ -1,14 +1,15 @@
 .btn,
 .github-button {
   background-color: var(--accent-primary);
-  border: none;
   border: 3px solid var(--accent-primary);
   border-radius: 5px;
   box-shadow: var(--bx-shadow);
   color: var(--text-clr-light);
   cursor: pointer;
+  display: inline-block;
   font-weight: 600;
   padding: 0.4em;
+  text-decoration: none;
 }
 
 .btn--outline {
@@ -33,5 +34,11 @@
 
   & span {
     margin-top: 0;
+  }
+}
+
+@media (min-width: 49rem) {
+  .btn {
+    padding: 0.25em 1em;
   }
 }
