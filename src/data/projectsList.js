@@ -17,7 +17,7 @@ module.exports = [
   {
     subTitle: "Landing Page",
     title: "Manage Landing Page",
-    summary: `HManage is fictional company that makes it simpler for software teams to plan their day-to-day tasks. I created this landing  with just html, css and javascript. The site is fully responsive and it has an carousel component i made with javasacript.`,
+    summary: `Manage is fictional company that makes it simpler for software teams to plan their day-to-day tasks. I created this landing  with just html, css and javascript. The site is fully responsive and it has an carousel component i made with javasacript.`,
     image: "./assets/images/manage.png",
     alt: "printscreen of the manage landing page",
   },

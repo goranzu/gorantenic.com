@@ -14,6 +14,7 @@
   }
 
   & header svg {
+    fill: var(--accent-primary);
     left: var(--left, unset);
     opacity: 0.3;
     position: absolute;
@@ -87,7 +88,9 @@
   --image-m-left-xl: auto;
   --image-m-right-xl: -10em;
   --flex-gap-left: 0;
-  --flex-gap-right: 2em;
+  --flex-gap-right: 0;
+  --btn-m-left: 0;
+  --btn-m-right: 0.5em;
 }
 
 @media (min-width: 49rem) {
@@ -118,7 +121,7 @@
     display: flex;
     flex-direction: var(--flex-dir, row-reverse);
 
-    & * + * {
+    & > * + * {
       margin-left: var(--flex-gap-left, 2em);
       margin-right: var(--flex-gap-right, 0);
     }
@@ -133,6 +136,12 @@
     & .image-container {
       margin-left: var(--image-m-left-xl, -10em);
       margin-right: var(--image-m-right-xl, 0);
+    }
+
+    & header svg {
+      height: 150px;
+      top: -6rem;
+      width: 150px;
     }
   }
 }

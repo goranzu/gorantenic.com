@@ -3,9 +3,13 @@
   margin-right: auto;
   max-width: 36rem;
 
+  & h3 {
+    font-size: var(--fs-500);
+  }
+
   & form {
     margin: 0;
-    margin-top: 1em;
+    margin-top: 1.5em;
     padding: 0;
     text-align: left;
   }
@@ -17,6 +21,10 @@
   & fieldset {
     border: 0;
     width: 100%;
+  }
+
+  & fieldset:disabled button[type="submit"] {
+    opacity: 0.5;
   }
 
   & fieldset > * + * {

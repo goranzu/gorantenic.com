@@ -1,6 +1,12 @@
 .skills {
   background-color: var(--skill-bg-clr);
 
+  & .text {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 400px;
+  }
+
   & .text * + * {
     margin-top: 1em;
   }
@@ -77,6 +83,8 @@
     position: relative;
 
     & .text {
+      margin-left: unset;
+      margin-right: unset;
       max-width: 40%;
       text-align: left;
     }
@@ -88,7 +96,7 @@
     }
 
     & .react-card {
-      top: 270px;
+      top: 300px;
     }
   }
 }
@@ -103,7 +111,7 @@
 
     & .react-card {
       right: 15%;
-      top: 250px;
+      top: 300px;
     }
   }
 }

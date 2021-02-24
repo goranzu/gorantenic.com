@@ -46,3 +46,9 @@ section {
     margin-top: 8em;
   }
 }
+
+@media (min-width: 75rem) {
+  .featured {
+    margin-top: 6em;
+  }
+}

@@ -6,6 +6,7 @@
   --light-accent-secondary: #bf741f;
   --light-gradient: linear-gradient(108.54deg, #2882ff 0%, #146180 99.14%);
 
+  --dark-bg-clr: #201c36;
   --dark-text-light-clr: #f2f2f2;
   --dark-text-dark-clr: #292929;
   --dark-accent-primary: #e8d34d;
@@ -15,6 +16,7 @@
   --blue-100: #28c2ff;
   --blue-200: #25afe6;
   --blue-300: #146180;
+  --blue-400: #0a3140;
 
   --purple-100: #5c529c;
   --purple-200: #2e294e;
@@ -26,12 +28,14 @@
   --accent-primary: var(--light-accent-primary, orange);
   --accent-secondary: var(--light-accent-secondary, darkorange);
   --lin-gradient: var(--light-gradient, blue);
+  --theme-btn-clr: var(--blue-400);
 
   --hero-bg-clr: var(--blue-100, blue);
   --skill-bg-clr: var(--blue-200);
   --skill-card-bg-clr: var(--blue-300);
   --skill-tag-bg-clr: var(--blue-200);
   --footer-bg-clr: var(--blue-200);
+  --btn-color: var(--light-text-light-clr);
 
   --fs-100: 1rem;
   --fs-200: 1.125rem;
