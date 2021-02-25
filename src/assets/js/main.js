@@ -7,11 +7,11 @@ themeButton.addEventListener("click", () => {
   const icon = themeButton.querySelector("img");
   const illustration = heroRight.querySelector("img");
   if (document.body.classList.contains("darkTheme")) {
-    illustration.src = "/assets/images/illustration-dark.svg";
-    icon.src = "/assets/images/sun.svg";
+    illustration.src = "./assets/images/illustration-dark.svg";
+    icon.src = "./assets/images/sun.svg";
   } else {
-    illustration.src = "/assets/images/illustration-light.svg";
-    icon.src = "/assets/images/moon.svg";
+    illustration.src = "./assets/images/illustration-light.svg";
+    icon.src = "./assets/images/moon.svg";
   }
 });
 

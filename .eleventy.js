@@ -1,38 +1,49 @@
-const { handleImage } = require('./config/eleventy/image');
+const rssPlugin = require("@11ty/eleventy-plugin-rss");
+const navPlugin = require("@11ty/eleventy-navigation");
+const markdownIt = require("markdown-it");
+const transforms = require("./lib/transforms");
 
-module.exports = (cfg) => {
-  cfg.addPassthroughCopy({ 'src/assets/fonts': 'fonts' });
-  cfg.addPassthroughCopy('src/**/*.{gif,svg}');
-  cfg.addPassthroughCopy('src/assets/images');
-  cfg.addPassthroughCopy('src/assets/favicon.ico');
-  cfg.addPassthroughCopy('src/assets/manifest.json');
+module.exports = function (config) {
+  // Plugins
+  config.addPlugin(navPlugin);
+  config.addPlugin(rssPlugin);
 
-  if (process.env.NODE_ENV === 'development') {
-    cfg.addPassthroughCopy('src/**/*.{jpg,jpeg,png,webp}');
-  }
-
-  /* Filters */
-  cfg.addFilter('jsAsset', (name) => {
-    return manifest[name];
+  // Transforms
+  Object.entries(transforms).map(([name, transform]) => {
+    config.addTransform(name, transform);
   });
 
-  /* shortcodes */
-  cfg.addNunjucksAsyncShortcode('Image', handleImage);
+  // Watch Targets
+  config.addWatchTarget("./src/assets");
+
+  // Markdown
+  config.setLibrary(
+    "md",
+    markdownIt({
+      html: true,
+      breaks: true,
+      linkify: true,
+      typographer: true,
+    }),
+  );
+
+  // Passtrhough files
+  config.addPassthroughCopy("src/assets/images");
+  config.addPassthroughCopy("src/assets/fonts");
+
+  // Deep Merge
+  config.setDataDeepMerge(true);
 
   return {
-    // use nunjucks as the main template engine.
-    templateFormats: ['md', 'njk', 'html'],
-    markdownTemplateEngine: 'njk',
-    htmlTemplateEngine: 'njk',
-    dataTemplateEngine: 'njk',
-
-    // change default inputs and output directories.
     dir: {
-      input: 'src',
-      output: 'dist',
-      includes: 'includes',
-      layouts: 'layouts',
-      data: 'data',
+      input: "src",
+      output: "dist",
+      layouts: "layouts",
+      includes: "includes",
+      data: "data",
     },
+    templateFormats: ["njk", "md", "11ty.js"],
+    htmlTemplateEngine: "njk",
+    markdownTemplateEngine: "njk",
   };
 };

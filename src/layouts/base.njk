@@ -1,32 +1,35 @@
----
-title: 'Goran Tenic - Portfolio'
----
-
 <!DOCTYPE html>
-<html lang="en">
-  {% include "head.njk" %}
-  <body>
+<html lang="{{ meta.lang }}">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ meta.title }}</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=IBM+Plex+Mono:wght@700&family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Serif:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ 'assets/styles/main.css' | url }}">
+  {% include "meta.njk" %}
+</head>
+<body>
 
-<button aria-label="switch to dark layout" class="theme-btn">
-<img src="/assets/images/moon.svg" alt="icon" aria-role="presentation">
-{# <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg> #}
-</button>
+  <button aria-label="switch to dark layout" class="theme-btn">
+    <img src="./assets/images/moon.svg" alt="icon" aria-role="presentation">
+  {# <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg> #}
+  </button>
 
-<div class="hero-background">
-</div>
-<svg class="hero-svg" fill="currentColor" preserveAspectRatio="none" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-  <polygon fill="inherit" points="0,0 100,0 0,100" />
-</svg>
+  <div class="hero-background">
+  </div>
+  <svg class="hero-svg" fill="currentColor" preserveAspectRatio="none" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <polygon fill="inherit" points="0,0 100,0 0,100" />
+  </svg>
 
   <div class="container">
     {% include "sections/header.njk" %}
   </div>
-    <main>
-      {{ content | safe }}
-    </main>
+  <main>
+    {{ content | safe }}
+  </main>
 
-    {% if env.dev %}
-    <script type="module" src="/js/app.js" async defer></script>
-    {% endif %}
-  </body>
+  <script src="{{ 'assets/js/main.js' | url }}" type="text/javascript"></script>
+</body>
 </html>
