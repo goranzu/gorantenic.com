@@ -1,10 +1,10 @@
 .btn,
 .github-button {
-  background-color: var(--accent-primary);
-  border: 3px solid var(--accent-primary);
+  background-color: var(--accent-100);
+  border: 3px solid var(--accent-100);
   border-radius: 5px;
   box-shadow: var(--bx-shadow);
-  color: var(--btn-color);
+  color: var(--text-color-secondary);
   cursor: pointer;
   display: inline-block;
   font-weight: 600;
@@ -14,13 +14,13 @@
 
 .btn--outline {
   background-color: transparent;
-  color: var(--text-clr-dark);
+  color: var(--text-color-200);
 }
 
 .github-button {
   align-items: center;
-  background-color: var(--accent-secondary);
-  border-color: var(--accent-secondary);
+  background-color: var(--accent-200);
+  border-color: var(--accent-200);
   display: inline-block;
   display: flex;
   font-weight: 600;
@@ -39,10 +39,10 @@
 }
 .theme-btn {
   align-items: center;
-  background-color: var(--theme-btn-clr);
+  background-color: var(--accent-200);
   border: none;
   border-radius: 5px;
-  color: var(--light-text-light-clr);
+  color: var(--white-100);
   cursor: pointer;
   display: flex;
   justify-content: center;

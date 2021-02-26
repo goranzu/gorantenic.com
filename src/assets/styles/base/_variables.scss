@@ -1,42 +1,74 @@
-:root {
-  --light-bg-clr: #fafeff;
-  --light-text-dark-clr: #252525;
-  --light-text-light-clr: #f5fcfe;
-  --light-accent-primary: #ff9a29;
-  --light-accent-secondary: #bf741f;
-  --light-gradient: linear-gradient(108.54deg, #2882ff 0%, #146180 99.14%);
-
-  --dark-bg-clr: #201c36;
-  --dark-text-light-clr: #f2f2f2;
-  --dark-text-dark-clr: #292929;
-  --dark-accent-primary: #e8d34d;
-  --dark-accent-secondary: #a89938;
-  --dark-gradient: linear-gradient(108.54deg, #8274db 0%, #201c36 99.14%);
-
+:root[data-theme="light"] {
   --blue-100: #28c2ff;
   --blue-200: #25afe6;
   --blue-300: #146180;
   --blue-400: #0a3140;
 
+  --white-100: #fafeff;
+  --white-200: #f5fcfe;
+
+  --black-100: #252525;
+
+  --lin-gradient: linear-gradient(108.54deg, #2882ff 0%, #146180 99.14%);
+
+  --orange-100: #ff9a29;
+  --orange-200: #bf741f;
+
+  --primary-100: var(--blue-100);
+  --primary-200: var(--blue-200);
+  --primary-300: var(--blue-300);
+
+  --accent-100: var(--orange-100);
+  --accent-200: var(--orange-200);
+
+  --text-color-primary: var(--black-100);
+  --text-color-secondary: var(--white-200);
+
+  --card-text-color: var(--white-200);
+
+  --body-bg-color: var(--white-200);
+}
+
+:root[data-theme="dark"] {
   --purple-100: #5c529c;
   --purple-200: #2e294e;
   --purple-300: #201c36;
 
-  --body-bg-clr: var(--light-bg-clr, white);
-  --text-clr-dark: var(--light-text-dark-clr, black);
-  --text-clr-light: var(--light-text-light-clr, white);
-  --accent-primary: var(--light-accent-primary, orange);
-  --accent-secondary: var(--light-accent-secondary, darkorange);
-  --lin-gradient: var(--light-gradient, blue);
-  --theme-btn-clr: var(--blue-400);
+  --white-100: #f2f2f2;
+  --white-200: #d9d9de;
 
-  --hero-bg-clr: var(--blue-100, blue);
-  --skill-bg-clr: var(--blue-200);
-  --skill-card-bg-clr: var(--blue-300);
-  --skill-tag-bg-clr: var(--blue-200);
-  --footer-bg-clr: var(--blue-200);
-  --btn-color: var(--light-text-light-clr);
+  --black-100: #292929;
 
+  --lin-gradient: linear-gradient(108.54deg, #2882ff 0%, #146180 99.14%);
+
+  --yellow-100: #e8d34d;
+  --yellow-200: #a89938;
+
+  --primary-100: var(--purple-200);
+  --primary-200: var(--purple-100);
+  --primary-300: var(--purple-300);
+
+  --accent-100: var(--yellow-100);
+  --accent-200: var(--yellow-200);
+
+  --body-bg-color: var(--purple-300);
+
+  --text-color-primary: var(--white-100);
+  --text-color-secondary: var(--black-100);
+
+  --card-text-color: var(--white-100);
+
+  & img {
+    filter: brightness(0.8) contrast(1.2);
+  }
+
+  & input,
+  textarea {
+    background-color: var(--white-200);
+  }
+}
+
+:root {
   --fs-100: 1rem;
   --fs-200: 1.125rem;
   --fs-300: 1.25rem;

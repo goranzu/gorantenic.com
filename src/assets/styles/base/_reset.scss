@@ -36,27 +36,11 @@ html {
 
 /* Set core body defaults */
 body {
-  background-color: var(--body-bg-clr);
+  background-color: var(--body-bg-color);
   line-height: 1.5;
   min-height: 100vh;
   text-rendering: optimizeSpeed;
-}
-
-body.darkTheme {
-  --body-bg-clr: var(--dark-bg-clr, #201c36);
-  --text-clr-dark: var(--dark-text-light-clr, #292929);
-  --text-clr-light: var(--dark-text-light-clr, #f2f2f2);
-  --accent-primary: var(--dark-accent-primary, #e8d34d);
-  --accent-secondary: var(--dark-accent-secondary, #a89938);
-  --lin-gradient: var(--dark-gradient, purple);
-  --theme-btn-clr: var(--blue-400);
-  --btn-color: var(--dark-text-dark-clr);
-
-  --hero-bg-clr: var(--purple-200, purple);
-  --skill-bg-clr: var(--purple-100);
-  --skill-card-bg-clr: var(--purple-300);
-  --skill-tag-bg-clr: var(--purple-100);
-  --footer-bg-clr: var(--purple-200);
+  color: var(--text-color-primary);
 }
 
 /* A elements that don't have a class get default styles */

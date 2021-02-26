@@ -3,13 +3,16 @@ const heroRight = document.querySelector(".hero-right");
 const contactForm = document.querySelector(".contact-form");
 
 themeButton.addEventListener("click", () => {
-  document.body.classList.toggle("darkTheme");
+  const theme = document.documentElement.dataset.theme;
   const icon = themeButton.querySelector("img");
   const illustration = heroRight.querySelector("img");
-  if (document.body.classList.contains("darkTheme")) {
+
+  if (theme === "light") {
+    document.documentElement.setAttribute("data-theme", "dark");
     illustration.src = "./assets/images/illustration-dark.svg";
     icon.src = "./assets/images/sun.svg";
-  } else {
+  } else if (theme === "dark") {
+    document.documentElement.setAttribute("data-theme", "light");
     illustration.src = "./assets/images/illustration-light.svg";
     icon.src = "./assets/images/moon.svg";
   }

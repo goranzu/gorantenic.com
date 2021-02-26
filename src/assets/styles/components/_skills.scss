@@ -1,5 +1,5 @@
 .skills {
-  background-color: var(--skill-bg-clr);
+  background-color: var(--primary-200);
 
   & .text {
     margin-left: auto;
@@ -20,10 +20,10 @@
   }
 
   & .card {
-    background-color: var(--skill-card-bg-clr);
+    background-color: var(--primary-300);
     border-radius: 5px;
     box-shadow: var(--bx-shadow);
-    color: var(--text-clr-light);
+    color: var(--card-text-color);
     font-size: 0.9rem;
     margin-left: auto;
     margin-right: auto;
@@ -71,7 +71,7 @@
   }
 
   & .card .tag {
-    background-color: var(--skill-tag-bg-clr);
+    background-color: var(--primary-200);
     border-radius: 5px;
     box-shadow: var(--bx-shadow);
     padding: 0.25em 0.5em;

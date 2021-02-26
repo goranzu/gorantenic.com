@@ -1,6 +1,5 @@
 .header {
   align-items: center;
-  /* color: var(--text-clr-dark); */
   display: flex;
   justify-content: space-between;
   margin-left: auto;
@@ -9,7 +8,7 @@
   padding: 1em 0;
 
   & .socials-list svg {
-    color: var(--text-clr-dark);
+    color: var(--text-color-primary);
   }
 
   & .header-left {
@@ -21,7 +20,7 @@
   }
 
   & .logo::before {
-    background-color: var(--accent-primary);
+    background-color: var(--accent-100);
     content: "";
     display: block;
     height: 5px;
