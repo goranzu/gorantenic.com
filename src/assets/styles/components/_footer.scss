@@ -3,15 +3,15 @@
   color: var(--text-clr-dark);
   padding: 2em 0;
 
-  & .copyright {
+  .copyright {
     font-size: 0.9rem;
   }
 
-  & .copyright > * {
+  .copyright > * {
     display: block;
   }
 
-  & .copyright * + * {
+  .copyright * + * {
     margin-top: 0.5em;
   }
 }

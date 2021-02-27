@@ -1,19 +1,19 @@
 .demo {
-  & * + * {
+  * + * {
     margin-top: 2em;
   }
 
-  & header {
+  header {
     padding: var(--pad, 0 1.5em 0 0);
     position: relative;
     text-align: var(--dir, right);
   }
 
-  & header * + * {
+  header * + * {
     margin-top: 0.2em;
   }
 
-  & header svg {
+  header svg {
     fill: var(--accent-100);
     left: var(--left, unset);
     opacity: 0.3;
@@ -22,17 +22,17 @@
     top: var(--top, -4.2rem);
   }
 
-  & header h4 {
+  header h4 {
     font-weight: 300;
   }
 
-  & header h3 {
+  header h3 {
     font-size: var(--fs-400);
     font-weight: 500;
     position: relative;
   }
 
-  /* & header h3::after {
+  /*  header h3::after {
     background-color: var(--accent-primary);
     border-radius: 10000px;
     content: "";
@@ -46,18 +46,21 @@
     width: 100px;
   } */
 
-  & main {
+  main {
     line-height: 1.6;
     margin-top: 2em;
   }
 
-  & .article-buttons {
+  .article-buttons {
     margin-left: auto;
     margin-right: auto;
-    max-width: 12rem;
+    // max-width: 12rem;
+
+    display: flex;
+    flex-direction: column;
   }
 
-  & .image-container {
+  .image-container {
     align-items: center;
     background: var(--lin-gradient);
     border-radius: 5px;
@@ -66,7 +69,7 @@
     max-width: 732px;
     padding: 0.5em;
 
-    & img {
+    img {
       height: auto;
       object-fit: cover;
       width: 100%;
@@ -97,18 +100,36 @@
   .demo {
     text-align: var(--text-dir, right);
 
-    & .content {
+    .content {
       margin-left: var(--m-left, auto);
       margin-right: var(--m-rigth, 0);
       max-width: 36rem;
+      display: grid;
+      // align-content: center;
     }
 
-    & .article-buttons {
+    .article-buttons {
       margin-left: var(--m-left, auto);
       margin-right: var(--m-right, 0);
+      flex-direction: row;
+      // margin-top: 0.75em;
+      align-self: flex-start;
+
+      a {
+        color: inherit;
+        margin-top: 0;
+      }
+
+      // a:first-of-type {
+      //   margin-left: auto;
+      // }
+
+      a + a {
+        margin-left: 2em;
+      }
     }
 
-    & .image-container {
+    .image-container {
       margin-left: var(--image-m-left, -5em);
       margin-right: var(--image-m-right, 0);
       margin-top: 1em;
@@ -121,24 +142,39 @@
     display: flex;
     flex-direction: var(--flex-dir, row-reverse);
 
+    .content {
+      grid-template-rows: min-content min-content min-content;
+      gap: 20px 0;
+    }
+
     & > * + * {
       margin-left: var(--flex-gap-left, 2em);
       margin-right: var(--flex-gap-right, 0);
     }
 
-    & .content,
-    & .image-container {
+    main {
+      margin-top: 0;
+      padding: 0;
+    }
+
+    .article-buttons {
+      align-self: flex-start;
+      margin-top: 0;
+    }
+
+    .content,
+    .image-container {
       flex-basis: 50%;
       flex-grow: 1;
       margin-top: 0;
     }
 
-    & .image-container {
+    .image-container {
       margin-left: var(--image-m-left-xl, -10em);
       margin-right: var(--image-m-right-xl, 0);
     }
 
-    & header svg {
+    header svg {
       height: 150px;
       top: -6rem;
       width: 150px;

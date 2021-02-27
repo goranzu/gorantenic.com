@@ -1,5 +1,6 @@
 .btn,
-.github-button {
+.github-button,
+.live-button {
   background-color: var(--accent-100);
   border: 3px solid var(--accent-100);
   border-radius: 5px;
@@ -17,7 +18,8 @@
   color: var(--text-color-200);
 }
 
-.github-button {
+.github-button,
+.live-button {
   align-items: center;
   background-color: var(--accent-200);
   border-color: var(--accent-200);
@@ -27,16 +29,30 @@
   justify-content: center;
   text-decoration: none;
   width: 100%;
+  max-width: 300px;
+  margin-left: auto;
+  margin: auto;
 
   /* & * + * {
     margin-left: var(--btn-m-left, 0.5em);
     margin-right: var(--btn-m-right, 0);
   } */
 
-  & span {
+  span {
+    margin: 0 0.5em;
     margin: 0 0.5em;
   }
 }
+
+.live-button {
+  margin-top: 0.5em;
+  background-color: transparent;
+  color: var(--text-color-primary);
+  span {
+    margin: 0;
+  }
+}
+
 .theme-btn {
   align-items: center;
   background-color: var(--accent-200);

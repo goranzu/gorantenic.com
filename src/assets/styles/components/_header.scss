@@ -7,11 +7,11 @@
   max-width: var(--page-width);
   padding: 1em 0;
 
-  & .socials-list svg {
+  .socials-list svg {
     color: var(--text-color-primary);
   }
 
-  & .header-left {
+  .header-left {
     align-items: center;
     display: flex;
     flex-grow: 1;
@@ -19,7 +19,7 @@
     max-width: 450px;
   }
 
-  & .logo::before {
+  .logo::before {
     background-color: var(--accent-100);
     content: "";
     display: block;
@@ -30,7 +30,7 @@
     width: 25%;
   }
 
-  & .open-nav-btn {
+  .open-nav-btn {
     align-items: center;
     background-color: transparent;
     border: none;
@@ -46,7 +46,7 @@
   .header {
     padding: 2em 0;
 
-    & .open-nav-btn {
+    .open-nav-btn {
       display: none;
     }
   }
