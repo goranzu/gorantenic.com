@@ -6,6 +6,12 @@
   padding: 0 0.5em;
 }
 
+@media (min-width: 49rem) {
+  .container {
+    padding: 0 1em;
+  }
+}
+
 @media (min-width: 80rem) {
   .container,
   .demo-container {

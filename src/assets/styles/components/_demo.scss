@@ -118,6 +118,36 @@
       a {
         color: inherit;
         margin-top: 0;
+        font-size: var(--fs-400);
+        text-decoration: none;
+        position: relative;
+      }
+
+      a::after,
+      a::before {
+        content: "";
+        width: 90%;
+        height: 50%;
+        z-index: -2;
+        opacity: 0.8;
+        background-color: var(--link-accent-bg);
+        position: absolute;
+        bottom: -5px;
+        left: 12px;
+        transform: translateX(5%);
+        transform: rotate(-2deg);
+      }
+
+      a::before {
+        z-index: -1;
+        background-color: var(--accent-100);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.2s linear;
+      }
+
+      a:hover::before {
+        transform: scaleX(1);
       }
 
       // a:first-of-type {

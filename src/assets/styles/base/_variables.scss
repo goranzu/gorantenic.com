@@ -26,7 +26,9 @@
 
   --card-text-color: var(--white-200);
 
-  --body-bg-color: var(--white-200);
+  --body-bg-color: #fff;
+
+  --link-accent-bg: #e8e8e8;
 }
 
 :root[data-theme="dark"] {
@@ -39,7 +41,7 @@
 
   --black-100: #292929;
 
-  --lin-gradient: linear-gradient(108.54deg, #2882ff 0%, #146180 99.14%);
+  --lin-gradient: linear-gradient(108.54deg, #8274db 0%, #201c36 99.14%);
 
   --yellow-100: #e8d34d;
   --yellow-200: #a89938;
@@ -57,6 +59,8 @@
   --text-color-secondary: var(--black-100);
 
   --card-text-color: var(--white-100);
+
+  --link-accent-bg: var(--purple-100);
 
   & img {
     filter: brightness(0.8) contrast(1.2);
