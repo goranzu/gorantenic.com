@@ -1,7 +1,8 @@
 const ENTRY_FILE_NAME = "main.scss";
 
 const path = require("path");
-const sass = require("node-sass");
+// const sass = require("node-sass");
+const sass = require("sass");
 const CleanCSS = require("clean-css");
 const cssesc = require("cssesc");
 const baseConfig = require("../../../config");

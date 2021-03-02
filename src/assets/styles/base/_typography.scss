@@ -1,10 +1,56 @@
+:root {
+  --scale: 1.25;
+  --base: 1.125rem;
+
+  --s: calc(var(--base) / var(--scale));
+  --xs: calc(var(--s) / var(--scale));
+  --medium: var(--base);
+  --l: calc(var(--medium) * var(--scale));
+  --xl: calc(var(--l) * var(--scale));
+  --xxl: calc(var(--xl) * var(--scale));
+  --xxxl: calc(var(--xxl) * var(--scale));
+  --xxxxl: calc(var(--xxxl) * var(--scale));
+}
+
 body {
   color: var(--text-clr-dark);
   font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, Segoe UI,
     Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
     sans-serif;
-  font-size: var(--body-fs, 1.125rem);
   text-align: center;
+  font-size: var(--medium);
+}
+
+h1 {
+  font-size: var(--xxl);
+}
+
+h2 {
+  font-size: var(--xxl);
+}
+
+h3 {
+  font-size: var(--xl);
+}
+
+h4 {
+  font-size: var(--l);
+}
+
+.small {
+  font-size: var(--s);
+}
+
+.xs-small {
+  font-size: var(--xs);
+}
+
+.medium {
+  font-size: var(--medium);
+}
+
+.large {
+  font-size: var(--l);
 }
 
 h1,
@@ -18,8 +64,13 @@ h4 {
 
 .header .logo {
   font-family: "Chakra Petch", "Courier New", Courier, monospace;
-  font-size: var(--fs-300);
   font-weight: 700;
   position: relative;
   text-transform: uppercase;
+}
+
+@media (min-width: 75rem) {
+  :root {
+    --base: 1.25rem;
+  }
 }
