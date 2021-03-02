@@ -2,7 +2,7 @@ module.exports = [
   {
     subTitle: "Featured Project",
     title: "Hacker News Clone",
-    summary: `Hacker News is website where users can share and comment on articles in the tech field. I made a clone of this site using this API.
+    summary: `Hacker News is website where users can share and comment on articles in the tech field. I made a clone of this site using <a href="https://github.com/davideast/hnpwa-api">this API</a>.
         The app is created using Next.js, react-query for data fetching and css modules for styling.`,
     image: "./assets/images/hn-clone.png",
     alt: "printscreen of my hacker news clone app",
@@ -10,7 +10,7 @@ module.exports = [
   {
     subTitle: "API Project",
     title: "Rest Countries",
-    summary: `This is a project where i use the REST Countries API to pull in country data. I used this data show infromation about the countries. Users can search by name, filter by region and for each country see a details page. `,
+    summary: `This is a project where i use the <a href="https://restcountries.eu/">REST Countries API</a> to pull in country data. I used this data show infromation about the countries. Users can search by name, filter by region and for each country see a details page. `,
     image: "./assets/images/rest-countries.png",
     alt: "printscreen of my rest countries app",
   },

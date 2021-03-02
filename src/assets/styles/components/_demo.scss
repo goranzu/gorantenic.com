@@ -1,63 +1,92 @@
 .demo {
-  * + * {
-    margin-top: 2em;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2em;
+  padding: 0 1em;
+
+  a {
+    color: inherit;
+  }
+
+  .content {
+    display: grid;
+    position: relative;
+    gap: 0.5em;
   }
 
   header {
-    padding: var(--pad, 0 1.5em 0 0);
-    position: relative;
-    text-align: var(--dir, right);
+    justify-self: flex-end;
+    text-align: right;
+    padding-right: 1.5em;
+
+    h4 {
+      font-weight: 300;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    header h3 {
+      font-size: var(--fs-400);
+      font-weight: 500;
+      position: relative;
+    }
   }
 
-  header * + * {
-    margin-top: 0.2em;
-  }
-
-  header svg {
+  svg {
     fill: var(--accent-100);
-    left: var(--left, unset);
-    opacity: 0.3;
     position: absolute;
-    right: var(--right, 0.5rem);
-    top: var(--top, -4.2rem);
-  }
-
-  header h4 {
-    font-weight: 300;
-  }
-
-  header h3 {
-    font-size: var(--fs-400);
-    font-weight: 500;
-    position: relative;
-  }
-
-  /*  header h3::after {
-    background-color: var(--accent-primary);
-    border-radius: 10000px;
-    content: "";
-    display: block;
-    height: 100px;
-    left: var(--left, unset);
+    top: -4.2rem;
+    right: 0;
     opacity: 0.3;
-    position: absolute;
-    right: var(--right, -1rem);
-    top: var(--top, -5.5rem);
-    width: 100px;
-  } */
+  }
 
   main {
     line-height: 1.6;
-    margin-top: 2em;
   }
 
   .article-buttons {
-    margin-left: auto;
-    margin-right: auto;
-    // max-width: 12rem;
-
     display: flex;
     flex-direction: column;
+    align-items: center;
+
+    a + a {
+      margin-top: 0.5em;
+    }
+
+    a {
+      margin-top: 0;
+      font-size: var(--fs-300);
+      text-decoration: none;
+      position: relative;
+    }
+
+    a::after,
+    a::before {
+      content: "";
+      width: 90%;
+      height: 30%;
+      z-index: -2;
+      opacity: 0.8;
+      background-color: var(--link-accent-bg);
+      position: absolute;
+      bottom: -3px;
+      left: 12px;
+      transform: translateX(5%);
+      transform: rotate(-2deg);
+    }
+
+    a::before {
+      z-index: -1;
+      background-color: var(--accent-100);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.2s linear;
+    }
+
+    a:hover::before {
+      transform: scaleX(1);
+    }
   }
 
   .image-container {
@@ -68,6 +97,7 @@
     justify-content: center;
     max-width: 732px;
     padding: 0.5em;
+    justify-self: center;
 
     img {
       height: auto;
@@ -77,137 +107,85 @@
   }
 }
 
-.demo--left {
-  --dir: left;
-  --pad: 0 0 0 1.5em;
-  --right: 0;
-  --left: 1rem;
-  --flex-dir: row;
-  --text-dir: left;
-  --m-left: 0;
-  --m-right: auto;
-  --image-m-left: auto;
-  --image-m-right: -5em;
-  --image-m-left-xl: auto;
-  --image-m-right-xl: -10em;
-  --flex-gap-left: 0;
-  --flex-gap-right: 0;
-  --btn-m-left: 0;
-  --btn-m-right: 0.5em;
+.demo.demo--left {
+  header {
+    justify-self: flex-start;
+    text-align: left;
+    padding-right: 0;
+    padding-left: 1.5em;
+  }
+
+  svg {
+    top: -4.2rem;
+    right: unset;
+    left: 0;
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: 49rem) {
   .demo {
-    text-align: var(--text-dir, right);
+    text-align: right;
 
     .content {
-      margin-left: var(--m-left, auto);
-      margin-right: var(--m-rigth, 0);
+      justify-items: end;
+    }
+
+    main {
       max-width: 36rem;
-      display: grid;
-      // align-content: center;
     }
 
     .article-buttons {
-      margin-left: var(--m-left, auto);
-      margin-right: var(--m-right, 0);
       flex-direction: row;
-      // margin-top: 0.75em;
-      align-self: flex-start;
 
-      a {
-        color: inherit;
+      a + a {
         margin-top: 0;
-        font-size: var(--fs-400);
-        text-decoration: none;
-        position: relative;
+        margin-left: 1em;
       }
 
       a::after,
       a::before {
-        content: "";
-        width: 90%;
         height: 50%;
-        z-index: -2;
-        opacity: 0.8;
-        background-color: var(--link-accent-bg);
-        position: absolute;
         bottom: -5px;
-        left: 12px;
-        transform: translateX(5%);
-        transform: rotate(-2deg);
-      }
-
-      a::before {
-        z-index: -1;
-        background-color: var(--accent-100);
-        transform: scaleX(0);
-        transform-origin: left;
-        transition: transform 0.2s linear;
-      }
-
-      a:hover::before {
-        transform: scaleX(1);
-      }
-
-      // a:first-of-type {
-      //   margin-left: auto;
-      // }
-
-      a + a {
-        margin-left: 2em;
       }
     }
+  }
 
-    .image-container {
-      margin-left: var(--image-m-left, -5em);
-      margin-right: var(--image-m-right, 0);
-      margin-top: 1em;
+  .demo.demo.demo--left {
+    text-align: left;
+
+    .content {
+      justify-items: start;
     }
   }
 }
 
 @media (min-width: 75rem) {
   .demo {
-    display: flex;
-    flex-direction: var(--flex-dir, row-reverse);
+    grid-template-columns: 1fr 1fr;
+    align-items: flex-start;
 
     .content {
-      grid-template-rows: min-content min-content min-content;
-      gap: 20px 0;
-    }
-
-    & > * + * {
-      margin-left: var(--flex-gap-left, 2em);
-      margin-right: var(--flex-gap-right, 0);
-    }
-
-    main {
-      margin-top: 0;
-      padding: 0;
-    }
-
-    .article-buttons {
-      align-self: flex-start;
-      margin-top: 0;
-    }
-
-    .content,
-    .image-container {
-      flex-basis: 50%;
-      flex-grow: 1;
-      margin-top: 0;
+      grid-column: 2 / -1;
     }
 
     .image-container {
-      margin-left: var(--image-m-left-xl, -10em);
-      margin-right: var(--image-m-right-xl, 0);
+      grid-column: 1 / 2;
+      grid-row-start: 1;
+      width: 130%;
+      margin-left: -20em;
+    }
+  }
+
+  .demo.demo--left {
+    .content {
+      grid-column: 1 / 2;
     }
 
-    header svg {
-      height: 150px;
-      top: -6rem;
-      width: 150px;
+    .image-container {
+      grid-column: 2 / -1;
+      margin-left: 0;
+      margin-right: -20em;
     }
   }
 }

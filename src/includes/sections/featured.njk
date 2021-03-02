@@ -11,7 +11,7 @@
     </header>
     <main>
       <p>
-        {{ projectsList[0].summary }}
+        {{ projectsList[0].summary | safe }}
       </p>
     </main>
     {# <div class="article-buttons">
@@ -26,7 +26,7 @@
       </a>
     </div> #}
     <div class="article-buttons">
-      <a href="https://github.com/goranzu/hn-clone" class="gihub-link">
+      <a href="https://github.com/goranzu/hn-clone">
         view on github
       </a>
       <a href="https://hn-clone-one.vercel.app/top/1">

@@ -28,6 +28,12 @@
     position: absolute;
     top: -4px;
     width: 25%;
+    transform-origin: left;
+    transition: transform 0.2s linear;
+  }
+
+  .logo:hover::before {
+    transform: scaleX(2.1);
   }
 
   .open-nav-btn {
