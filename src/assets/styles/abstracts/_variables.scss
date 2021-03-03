@@ -1,0 +1,34 @@
+$breakpoints: (
+  md: 49rem,
+  lg: 75rem,
+);
+
+:root[data-theme="light"] {
+  --blue-100: #20a4f3;
+
+  --red-100: #ff6571;
+
+  --neutral-100: #f3faff;
+  --neutral-200: #393939;
+
+  --body-bg-clr: var(--neutral-100);
+  --body-txt-clr: var(--neutral-200);
+
+  --primary-100: var(--blue-100);
+  --accent-100: var(--red-100);
+}
+
+:root[data-theme="dark"] {
+  & img {
+    filter: brightness(0.8) contrast(1.2);
+  }
+
+  & input,
+  textarea {
+    background-color: var(--white-200);
+  }
+}
+
+:root {
+  --border-radius: 5px;
+}
