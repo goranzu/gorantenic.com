@@ -1,62 +1,19 @@
 .hero {
-  margin-top: 4em;
+  margin-top: 2.5em;
 }
 
-.featured {
-  margin-top: 11em;
-}
+.selected-work {
+  margin-top: 8em;
 
-.skills {
-  margin-top: 4em;
-}
-
-section {
-  padding: 3em 0;
-}
-
-.work {
-  margin-top: 4em;
-}
-
-.contact {
-  margin-top: 2em;
-}
-
-.footer {
-  margin-top: 4em;
-}
-
-@media (min-width: 34.5rem) {
-  .featured {
-    margin-top: 16em;
-  }
-}
-
-@media (min-width: 49rem) {
-  .featured {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 8em;
-    /* max-width: var(--page-width); */
+  @include mq(xs) {
+    margin-top: 11em;
   }
 
-  .work {
-    margin-top: 9em;
-  }
-}
-
-@media (min-width: 67.5rem) {
-  .work {
-    margin-top: 8em;
-  }
-}
-
-@media (min-width: 75rem) {
-  .featured {
+  @include mq(md) {
     margin-top: 6em;
   }
+}
 
-  .work {
-    margin-top: 12em;
-  }
+.cta {
+  margin-top: 5em;
 }

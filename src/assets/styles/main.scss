@@ -6,14 +6,18 @@
 @import "./base/reset";
 @import "./base/layout";
 
+@import "./sections/header";
+@import "./sections/selected-work";
+@import "./sections/cta";
+@import "./sections/footer";
+
 @import "./components/container";
 @import "./components/hero-background";
-@import "./components/header";
 @import "./components/hero";
 @import "./components/btn";
 @import "./components/demo";
 @import "./components/skills";
 @import "./components/work";
 @import "./components/contact";
-@import "./components/footer";
 @import "./components/main-nav";
+@import "./components/image-wrapper";

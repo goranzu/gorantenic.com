@@ -1,0 +1,15 @@
+.footer {
+  padding: 4em 0;
+
+  .f-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: start;
+    max-width: 15rem;
+    column-gap: 1em;
+  }
+
+  a {
+    color: inherit;
+  }
+}

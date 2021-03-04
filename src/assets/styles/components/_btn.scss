@@ -1,87 +1,31 @@
-.btn,
-.github-button,
-.live-button {
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
   background-color: var(--accent-100);
-  border: 3px solid var(--accent-100);
-  border-radius: 5px;
-  box-shadow: var(--bx-shadow);
-  color: var(--text-color-secondary);
-  cursor: pointer;
-  display: inline-block;
-  font-weight: 600;
-  padding: 0.4em;
+  border: 3px solid var(--neutral-200);
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 0.5em 1.75em;
+  border-radius: var(--border-radius);
+  transition: background-color 0.2s linear;
+}
+
+.btn:hover {
+  background-color: darken($primary-100, 10%);
+}
+
+.more-work-link {
+  color: inherit;
   text-decoration: none;
-}
-
-.btn--outline {
-  background-color: transparent;
-  color: var(--text-color-200);
-}
-
-.github-button,
-.live-button {
-  align-items: center;
-  background-color: var(--accent-200);
-  border-color: var(--accent-200);
-  display: inline-block;
   display: flex;
-  font-weight: 600;
-  justify-content: center;
-  text-decoration: none;
-  width: 100%;
-  max-width: 300px;
-  margin-left: auto;
-  margin: auto;
-
-  /* & * + * {
-    margin-left: var(--btn-m-left, 0.5em);
-    margin-right: var(--btn-m-right, 0);
-  } */
-
-  span {
-    margin: 0 0.5em;
-    margin: 0 0.5em;
-  }
-}
-
-.live-button {
-  margin-top: 0.5em;
-  background-color: transparent;
-  color: var(--text-color-primary);
-  span {
-    margin: 0;
-  }
-}
-
-.theme-btn {
   align-items: center;
-  background-color: var(--accent-200);
-  border: none;
-  border-radius: 5px;
-  color: var(--white-100);
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  padding: 0.5em;
-  position: fixed;
-  right: 17px;
-  stroke: white;
-  top: 70px;
-  z-index: 1000;
-}
 
-@media (min-width: 49rem) {
-  .btn {
-    padding: 0.25em 1em;
+  svg {
+    transition: transform 0.1s linear;
   }
 
-  .theme-btn {
-    top: 80px;
-  }
-}
-
-@media (min-width: 88rem) {
-  .theme-btn {
-    top: 32px;
+  &:hover > svg {
+    transform: translateX(4px);
   }
 }

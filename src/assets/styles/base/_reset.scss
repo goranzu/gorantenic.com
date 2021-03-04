@@ -36,11 +36,11 @@ html {
 
 /* Set core body defaults */
 body {
-  background-color: var(--body-bg-color);
+  background-color: var(--body-bg-clr);
   line-height: 1.5;
   min-height: 100vh;
   text-rendering: optimizeSpeed;
-  color: var(--text-color-primary);
+  color: var(--body-txt-clr);
 }
 
 /* A elements that don't have a class get default styles */

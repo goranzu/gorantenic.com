@@ -1,0 +1,42 @@
+.selected-work {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  gap: 2em;
+
+  @include mq(md) {
+    gap: 1em;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content 1fr;
+  }
+
+  h2 {
+    text-transform: uppercase;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    align-self: flex-end;
+    justify-self: start;
+  }
+
+  .selected-1 {
+    @include mq(md) {
+      grid-row: 2 / span 1;
+    }
+  }
+
+  .selected-2 {
+    @include mq(md) {
+      grid-row: 2 / span 1;
+      grid-column: 2 / -1;
+    }
+  }
+
+  .more-work-link {
+    @include mq(md) {
+      grid-row-start: -1;
+      grid-column: 1 / -1;
+      justify-self: end;
+      align-self: flex-start;
+    }
+  }
+}

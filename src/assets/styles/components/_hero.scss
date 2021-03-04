@@ -1,10 +1,23 @@
 .hero {
   position: relative;
 
+  @include mq(md) {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: var(--page-width);
+    text-align: left;
+  }
+
   .hero-left {
     margin-left: auto;
     margin-right: auto;
     max-width: 31.25rem;
+
+    @include mq(md) {
+      flex-basis: 50%;
+      flex-grow: 1;
+    }
   }
 
   .hero-left h1 {
@@ -12,62 +25,48 @@
     margin-top: 0.2em;
   }
 
+  .hero-left .underline {
+    position: relative;
+  }
+
+  .hero-left .underline::after {
+    content: "";
+    width: 100%;
+    height: 10px;
+    background-color: var(--accent-100);
+    position: absolute;
+    bottom: 3px;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    transform: rotate(-2deg);
+  }
+
   .hero-left p {
     line-height: 1.75;
     margin-top: 1em;
   }
 
-  .hero-left .hero-buttons {
-    margin-top: 1.5em;
+  .hero-left .btn {
+    margin-top: 1em;
   }
 
   .hero-right {
-    bottom: -4.5rem;
+    top: 0;
     left: 0;
     opacity: 0.15;
     position: absolute;
-    z-index: -1;
-  }
+    z-index: -2;
 
-  .hero-buttons {
-    display: flex;
-    flex-direction: column;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 12rem;
-  }
-
-  .hero-buttons a + a {
-    margin-top: 0.75em;
-  }
-}
-
-@media (min-width: 34.5rem) {
-  .hero {
-    .hero-right {
+    @include mq(s) {
       bottom: 0;
       left: unset;
       margin: auto;
       right: 0;
       top: 0;
     }
-  }
-}
 
-@media (min-width: 49rem) {
-  .hero {
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: var(--page-width);
-    text-align: left;
-
-    .hero-left {
-      flex-basis: 50%;
-      flex-grow: 1;
-    }
-
-    .hero-right {
+    @include mq(md) {
       bottom: unset;
       flex-basis: 50%;
       flex-grow: 1;
@@ -76,35 +75,16 @@
       opacity: 1;
       position: unset;
       z-index: unset;
+    }
 
-      img {
+    @include mq(lg) {
+      margin-top: -3em;
+    }
+
+    img {
+      @include mq(md) {
         margin-left: auto;
       }
-    }
-
-    .hero-buttons {
-      align-items: center;
-      flex-direction: row;
-      justify-content: start;
-      /* background-color: red; */
-      margin-left: 0;
-      margin-left: unset;
-      margin-right: unset;
-      max-width: 16.8rem;
-      text-align: center;
-    }
-
-    .hero-buttons a + a {
-      margin-left: 1em;
-      margin-top: 0;
-    }
-  }
-}
-
-@media (min-width: 75rem) {
-  .hero {
-    .hero-right {
-      margin-top: -3em;
     }
   }
 }

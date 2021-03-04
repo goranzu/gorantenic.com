@@ -1,21 +1,26 @@
 $breakpoints: (
+  xs: 29.6rem,
+  s: 34.5rem,
   md: 49rem,
   lg: 75rem,
 );
 
+// SCSS Variabel so i can use sass functions.
+$primary-100: #ffda82;
+
 :root[data-theme="light"] {
-  --blue-100: #20a4f3;
+  --blue-100: #82a8ff;
 
-  --red-100: #ff6571;
+  --yellow-100: #ffda82;
 
-  --neutral-100: #f3faff;
-  --neutral-200: #393939;
+  --neutral-100: #f6f7f8;
+  --neutral-200: #333333;
 
   --body-bg-clr: var(--neutral-100);
   --body-txt-clr: var(--neutral-200);
 
   --primary-100: var(--blue-100);
-  --accent-100: var(--red-100);
+  --accent-100: var(--yellow-100);
 }
 
 :root[data-theme="dark"] {
@@ -31,4 +36,5 @@ $breakpoints: (
 
 :root {
   --border-radius: 5px;
+  --page-width: 75rem;
 }
