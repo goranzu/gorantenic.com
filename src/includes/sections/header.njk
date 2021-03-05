@@ -1,12 +1,18 @@
+{% set navPages = collections.all | eleventyNavigation %}
+
 <header class="header">
   <div class="logo">
     <p class="fs-300 sans bold">Goran Tenic</p>
   </div>
   <nav class="main-nav">
     <ul role="list" class="nav-list">
-      <li><a href="#skills">My Skill</a></li>
-      <li><a href="#work">My Work</a></li>
-      <li><a href="#contact">Contact</a></li>
+      {% for entry in navPages %}
+        <li {% if entry.url == page.url %}
+          class="active"
+        {% endif %}>
+          <a href="{{ entry.url }}"><span class="bold">0{{ loop.index }}</span> {{ entry.title }}</a>
+        </li>
+      {% endfor %}
     </ul>
   </nav>
   <button class="open-nav-btn" aria-label="Open Navigation">

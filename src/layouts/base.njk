@@ -7,7 +7,7 @@
   <title>{{ meta.title }}</title>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&family=IBM+Plex+Serif:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{{ 'assets/styles/main.css' | url }}">
+  <link rel="stylesheet" href="{{ '/assets/styles/main.css' | url }}">
   {% include "meta.njk" %}
 </head>
 <body>
@@ -19,6 +19,6 @@
     {{ content | safe }}
   </main>
 
-  <script src="{{ 'assets/js/main.js' | url }}" type="text/javascript"></script>
+  <script src="{{ '/assets/js/main.js' | url }}" type="text/javascript"></script>
 </body>
 </html>
