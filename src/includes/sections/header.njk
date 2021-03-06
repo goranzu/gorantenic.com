@@ -1,21 +1,23 @@
 {% set navPages = collections.all | eleventyNavigation %}
 
 <header class="header">
-  <div class="logo">
-    <p class="fs-300 sans bold">Goran Tenic</p>
+  <div class="container">
+    <div class="logo">
+      <p class="fs-300 sans bold">Goran Tenic</p>
+    </div>
+    <nav class="main-nav">
+      <ul role="list" class="nav-list">
+        {% for entry in navPages %}
+          <li {% if entry.url == page.url %}
+            class="active"
+          {% endif %}>
+            <a href="{{ entry.url }}"><span class="bold">0{{ loop.index }}</span> {{ entry.title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
+    <button class="open-nav-btn" aria-label="Open Navigation">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
   </div>
-  <nav class="main-nav">
-    <ul role="list" class="nav-list">
-      {% for entry in navPages %}
-        <li {% if entry.url == page.url %}
-          class="active"
-        {% endif %}>
-          <a href="{{ entry.url }}"><span class="bold">0{{ loop.index }}</span> {{ entry.title }}</a>
-        </li>
-      {% endfor %}
-    </ul>
-  </nav>
-  <button class="open-nav-btn" aria-label="Open Navigation">
-  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-  </button>
 </header>

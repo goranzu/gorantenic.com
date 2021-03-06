@@ -6,6 +6,8 @@
 @import "./base/reset";
 @import "./base/layout";
 
+@import "./pages/work";
+
 @import "./sections/header";
 @import "./sections/selected-work";
 @import "./sections/cta";
@@ -21,3 +23,4 @@
 @import "./components/contact";
 @import "./components/main-nav";
 @import "./components/image-wrapper";
+@import "./components/portfolio-item";

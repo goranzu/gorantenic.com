@@ -1,0 +1,11 @@
+.work-header {
+  background-color: var(--primary-100);
+  padding: 1.5em 0 2em 0;
+  .container > * + * {
+    margin-top: 1em;
+  }
+}
+
+.portfolio {
+  margin-top: 2em;
+}

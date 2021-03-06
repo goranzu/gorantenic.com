@@ -7,4 +7,30 @@ eleventyNavigation:
 permalink: /work/
 ---
 
-<h1>Work Page</h1>
+<section class="work-header">
+  <div class="container">
+    <h1 class="serif fs-500 bold">Some of my Work</h1>
+    <p>
+      A selection of my work. The projects showed here are built with a variety of technologies. Some use the basic web techonolgies html, css, javascript. Others are built with frameworks like Next.js.
+    </p>
+  </div>
+</section>
+
+<section class="portfolio container">
+  <article class="portfolio-item">
+    <div class="image-wrapper">
+      <img src="/assets/images/hn-clone.png" alt="screenshot of my hacker news clone">
+    </div>
+    <header>
+      <p class="bold">Next.js project</p>
+      <h2 class="bold fs-500">Hacker News Clone</h2>
+    </header>
+    <section class="content">
+      Hacker News is website where users can share and comment on articles in the tech field. I made a clone of this site using <a href="https://github.com/davideast/hnpwa-api">this API</a>. The app is created using Next.js, react-query for data fetching and css modules for styling.
+    </section>
+    <section class="portfolio-links">
+      <a class="semi-bold" href="https://github.com/goranzu/hn-clone">view on github</a>
+      <a class="semi-bold" href="https://hn-clone-one.vercel.app/top/1">view the live site</a>
+    </section>
+  </article>
+</section>

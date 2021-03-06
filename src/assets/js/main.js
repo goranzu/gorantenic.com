@@ -1,40 +1,42 @@
-const themeButton = document.querySelector(".theme-btn");
-const heroRight = document.querySelector(".hero-right");
-const contactForm = document.querySelector(".contact-form");
+console.log("working");
 
-themeButton.addEventListener("click", () => {
-  const theme = document.documentElement.dataset.theme;
-  const icon = themeButton.querySelector("img");
-  const illustration = heroRight.querySelector("img");
+// const themeButton = document.querySelector(".theme-btn");
+// const heroRight = document.querySelector(".hero-right");
+// const contactForm = document.querySelector(".contact-form");
 
-  if (theme === "light") {
-    document.documentElement.setAttribute("data-theme", "dark");
-    illustration.src = "./assets/images/illustration-dark.svg";
-    icon.src = "./assets/images/sun.svg";
-  } else if (theme === "dark") {
-    document.documentElement.setAttribute("data-theme", "light");
-    illustration.src = "./assets/images/illustration-light.svg";
-    icon.src = "./assets/images/moon.svg";
-  }
-});
+// themeButton.addEventListener("click", () => {
+//   const theme = document.documentElement.dataset.theme;
+//   const icon = themeButton.querySelector("img");
+//   const illustration = heroRight.querySelector("img");
 
-function wait(ms = 1000) {
-  return new Promise((resolve) => {
-    setTimeout(resolve, ms);
-  });
-}
+//   if (theme === "light") {
+//     document.documentElement.setAttribute("data-theme", "dark");
+//     illustration.src = "./assets/images/illustration-dark.svg";
+//     icon.src = "./assets/images/sun.svg";
+//   } else if (theme === "dark") {
+//     document.documentElement.setAttribute("data-theme", "light");
+//     illustration.src = "./assets/images/illustration-light.svg";
+//     icon.src = "./assets/images/moon.svg";
+//   }
+// });
 
-contactForm.addEventListener("submit", async (e) => {
-  e.preventDefault();
+// function wait(ms = 1000) {
+//   return new Promise((resolve) => {
+//     setTimeout(resolve, ms);
+//   });
+// }
 
-  const formData = new FormData(e.target);
-  e.target.querySelector("fieldset").disabled = true;
-  const email = formData.get("email");
-  const name = formData.get("name");
-  const message = formData.get("message");
+// contactForm.addEventListener("submit", async (e) => {
+//   e.preventDefault();
 
-  await wait(2000);
-  e.target.querySelector("fieldset").disabled = false;
+//   const formData = new FormData(e.target);
+//   e.target.querySelector("fieldset").disabled = true;
+//   const email = formData.get("email");
+//   const name = formData.get("name");
+//   const message = formData.get("message");
 
-  console.log({ name, email, message });
-});
+//   await wait(2000);
+//   e.target.querySelector("fieldset").disabled = false;
+
+//   console.log({ name, email, message });
+// });
