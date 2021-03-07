@@ -1,0 +1,40 @@
+.contact-form {
+  margin-top: 2em;
+
+  form {
+    max-width: 31.25rem;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include mq(md) {
+      margin-left: 0;
+      text-align: left;
+    }
+  }
+
+  label {
+    display: block;
+    text-align: left;
+
+    &:not(:first-of-type) {
+      margin-top: 0.5em;
+    }
+  }
+
+  input,
+  textarea {
+    padding: 0.25em 0.25em 0.25em 0.5em;
+    margin-top: 0.25em;
+    width: 100%;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--neutral-200);
+  }
+
+  textarea {
+    min-height: 200px;
+  }
+
+  button {
+    margin-top: 1em;
+  }
+}

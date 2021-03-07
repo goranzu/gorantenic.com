@@ -119,6 +119,10 @@
         opacity: 0.2;
         transform: rotate(-2deg);
         z-index: -1;
+
+        @include mq(lg) {
+          height: 10px;
+        }
       }
 
       &::after {

@@ -7,4 +7,32 @@ eleventyNavigation:
 permalink: /contact/
 ---
 
-<h1>Contact Page</h1>
+<section class="page-header">
+  <div class="container">
+    <h1 class="fs-500 bold">
+      Get in touch with me.
+    </h1>
+  </div>
+</section>
+
+
+<div class="container">
+  <section class="contact-form">
+    <form method="POST">
+      <label for="name">
+        Name
+      </label>
+      <input type="text" id="name" name="name" />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" />
+
+      <label for="message">Message</label>
+      <textarea name="message" id="message"></textarea>
+
+      <button type="submit" class="btn">Send me a message</button>
+    </form>
+  </section>
+</div>
+
+{% include "sections/footer.njk" %}

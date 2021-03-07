@@ -7,6 +7,8 @@
 @import "./base/layout";
 
 @import "./pages/work";
+@import "./pages/about";
+@import "./pages/contact";
 
 @import "./sections/header";
 @import "./sections/selected-work";
@@ -20,7 +22,8 @@
 @import "./components/demo";
 @import "./components/skills";
 @import "./components/work";
-@import "./components/contact";
+// @import "./components/contact";
 @import "./components/main-nav";
 @import "./components/image-wrapper";
 @import "./components/portfolio-item";
+@import "./components/page-header";
