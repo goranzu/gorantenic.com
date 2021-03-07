@@ -11,7 +11,7 @@
   --fs-700: calc(var(--fs-600) * var(--scale));
   --fs-800: calc(var(--fs-700) * var(--scale));
 
-  @include mq(md) {
+  @include mq(lg) {
     --base: 1.375rem;
   }
 }
@@ -90,10 +90,4 @@ h4 {
   font-weight: 700;
   position: relative;
   text-transform: uppercase;
-}
-
-@media (min-width: 75rem) {
-  :root {
-    --base: 1.25rem;
-  }
 }

@@ -4,8 +4,39 @@
   .container > * + * {
     margin-top: 1em;
   }
+
+  h1,
+  p {
+    margin-left: auto;
+    margin-right: auto;
+
+    @include mq(md) {
+      text-align: left;
+      margin-left: 0;
+    }
+  }
+
+  h1 {
+    max-width: 30ch;
+  }
+
+  p {
+    max-width: 60ch;
+  }
 }
 
 .portfolio {
-  margin-top: 2em;
+  margin-top: 4em;
+
+  & > * + * {
+    margin-top: 4em;
+  }
+
+  @include mq(lg) {
+    margin-top: 8em;
+
+    & > * + * {
+      margin-top: 8em;
+    }
+  }
 }
