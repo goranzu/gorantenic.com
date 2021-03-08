@@ -1,0 +1,65 @@
+.contact-form {
+  margin-top: 2em;
+  --error-color: hsl(0, 91%, 44%);
+
+  form {
+    max-width: 31.25rem;
+    margin-left: auto;
+    margin-right: auto;
+
+    fieldset {
+      margin: 0;
+      padding: 0;
+      border: none;
+
+      &:disabled > input,
+      &:disabled > textarea,
+      &:disabled > button {
+        opacity: 0.5;
+      }
+    }
+
+    @include mq(md) {
+      margin-left: 0;
+      text-align: left;
+    }
+  }
+
+  label {
+    display: block;
+    text-align: left;
+
+    &:not(:first-of-type) {
+      margin-top: 0.5em;
+    }
+  }
+
+  input,
+  textarea {
+    padding: 0.25em 0.25em 0.25em 0.5em;
+    margin-top: 0.25em;
+    width: 100%;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--neutral-200);
+  }
+
+  textarea {
+    min-height: 200px;
+  }
+
+  button {
+    margin-top: 1em;
+  }
+
+  input.error,
+  textarea.error {
+    border: 1px solid var(--error-color);
+  }
+
+  .error-message {
+    text-align: left;
+    display: block;
+    color: var(--error-color);
+    padding-left: 0.5em;
+  }
+}

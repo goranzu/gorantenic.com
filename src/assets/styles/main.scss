@@ -8,22 +8,19 @@
 
 @import "./pages/work";
 @import "./pages/about";
-@import "./pages/contact";
 
 @import "./sections/header";
+@import "./sections/hero";
 @import "./sections/selected-work";
 @import "./sections/cta";
 @import "./sections/footer";
+@import "./sections/page-header";
 
 @import "./components/container";
 @import "./components/hero-background";
-@import "./components/hero";
 @import "./components/btn";
-@import "./components/demo";
-@import "./components/skills";
-@import "./components/work";
-// @import "./components/contact";
 @import "./components/main-nav";
 @import "./components/image-wrapper";
 @import "./components/portfolio-item";
-@import "./components/page-header";
+@import "./components/side-nav";
+@import "./components/contact-form";

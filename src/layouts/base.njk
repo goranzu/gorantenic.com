@@ -1,3 +1,5 @@
+{% set navPages = collections.all | eleventyNavigation %}
+
 <!DOCTYPE html>
 <html lang="{{ meta.lang }}" data-theme="light">
 <head>
@@ -12,7 +14,29 @@
 </head>
 <body>
 
+
   {% include "sections/header.njk" %}
+
+  <div class="overlay"></div>
+
+  <aside class="side-nav">
+  <button class="close-side-nav">
+    <span>Close side navigation</span>
+    <img src="/assets/images/x.svg" inline />
+  </button>
+    <nav>
+      <ul role="list">
+        {% for entry in navPages %}
+          <li {% if entry.url == page.url %}
+            class="active"
+          {% endif %}>
+            <a href="{{ entry.url }}"><span class="bold">0{{ loop.index }}</span> {{ entry.title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </aside>
+
   <main>
     {{ content | safe }}
   </main>

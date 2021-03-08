@@ -1,0 +1,72 @@
+.side-nav {
+  background-color: var(--neutral-100);
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  z-index: 100;
+  display: grid;
+  grid-template-columns: 2em 1fr;
+  width: 60vw;
+  transform: translateX(100%);
+  transition: transform 0.2s linear;
+
+  .close-side-nav {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    span {
+      @include sr-only;
+    }
+  }
+
+  nav {
+    margin-top: 4em;
+    grid-column: 2 / -1;
+    text-align: left;
+
+    a {
+      color: inherit;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+
+    & li + li {
+      margin-top: 1em;
+    }
+  }
+}
+
+.side-nav.open {
+  transform: translateX(0);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--neutral-200);
+  z-index: 50;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s linear;
+  height: 100%;
+  width: 100%;
+}
+
+.overlay.visible {
+  pointer-events: all;
+  opacity: 0.3;
+}
