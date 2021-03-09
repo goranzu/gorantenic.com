@@ -23,6 +23,7 @@
     bottom: -4px;
     left: 0;
     background-color: var(--accent-100);
+    opacity: 0.5;
     width: 100%;
     height: 5px;
     transform: scaleX(0);
@@ -33,6 +34,10 @@
   a:hover::after,
   li.active > a::after {
     transform: scaleX(1);
+  }
+
+  li.active > a::after {
+    opacity: 1;
   }
 }
 

@@ -1,5 +1,10 @@
 .about-me {
   margin-top: 3em;
+  line-height: 1.7;
+
+  @include mq(md) {
+    text-align: left;
+  }
 
   p {
     max-width: 60ch;
@@ -7,7 +12,6 @@
     margin-right: auto;
 
     @include mq(md) {
-      text-align: left;
       margin-left: 0;
     }
   }

@@ -6,10 +6,10 @@
   }
 
   @include mq(lg) {
-    margin-top: 8em;
+    margin-top: 9em;
 
     & > * + * {
-      margin-top: 8em;
+      margin-top: 9em;
     }
   }
 }
